@@ -64,6 +64,10 @@ for /L %%i in (!x!,-1,1) do (
 	for /L %%j in (0,1,!n!) do set string=!string!*
 	echo !string!
 	set string=
-)	
+)
+
+echo.
+echo ===============
+echo.
 
 
