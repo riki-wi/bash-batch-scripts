@@ -1,0 +1,99 @@
+echo
+echo ============
+echo
+
+string=
+star=*
+
+for (( i=1; i<=$1; i++))
+do
+	for (( j=1; j<=$i; j++))
+	do
+		string+=$star
+	done
+	echo "$string"
+	string=
+done
+
+
+echo 
+echo ============
+echo
+
+string=
+
+for (( i=1; i<=$1; i++))
+do
+	for (( j=$1-$i+1; j>=1; j-- ))
+	do
+		string+=$star
+	done
+	echo "$string"
+	string=
+done
+
+echo
+echo ============
+echo
+
+
+string=
+
+for (( i=1; i<=$1; i++))
+do
+	for (( j=$1-$i-1; j>=0; j-- ))
+	do
+		string+=" "
+	done
+	
+	for (( j=1; j<=$i; j++ ))
+	do
+		string+=$star
+	done
+	echo "$string"
+	string=
+done
+
+echo
+echo ============
+echo
+
+
+srting=
+
+for (( i=1; i<=$1; i++ )) 
+do
+	for (( j=$1-$i; j>=1; j-- ))
+	do
+		string+=" "
+	done
+	
+	for (( j=0; j<=2*$i-2; j++ )) 
+	do
+		string+=$star
+	done
+
+	echo "$string"
+	string=
+done
+
+for (( i=$1-1; i>=1; i-- ))
+do
+        for (( j=$1-$i; j>=1; j-- ))
+        do
+                string+=" "
+        done
+
+        for (( j=0; j<=2*$i-2; j++ ))
+        do
+                string+=$star
+        done
+
+        echo "$string"
+        string=
+done
+
+echo
+echo ============
+echo
+
